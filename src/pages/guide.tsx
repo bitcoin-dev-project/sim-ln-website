@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const QuickStart = () => {
   return (
-    <main className="w-full font-inter text-xl px-10 py-10 md:max-w-5xl mx-auto">
+    <main className="w-full font-inter text-xl px-10 py-10 md:max-w-7xl mx-auto">
       <Image src={race_car} alt="race_car" />
       <section className="text-gray-800 font-normal">
         <h1 className="text-5xl pb-4 text-brand-primary font-bold">
