@@ -17,7 +17,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         />
         <meta
           property="og:image"
-          content="https://simln.dev/SimLNLogoASCII.svg"
+          content={`${
+              process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+            }/og_image_dark.png`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./vercel.svg" />
