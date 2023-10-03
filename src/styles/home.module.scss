@@ -1,0 +1,47 @@
+.shimmer_text {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  &:hover {
+    &::before {
+      animation: shimmer 2s infinite;
+    }
+  }
+}
+
+.action_buttons {
+  position: relative;
+  display: inline-block;
+  &:hover {
+    &::before {
+      animation: shimmer 1s;
+    }
+  }
+}
+
+.action_buttons::before, .shimmer_text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0),
+  );
+  background-size: 100% 100%;
+  // animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
