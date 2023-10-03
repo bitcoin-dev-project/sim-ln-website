@@ -10,7 +10,7 @@ import styles from "@/styles/home.module.scss";
 export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col items-center`}>
-      <section className="w-full relative overflow-hidden">
+      <section className="w-full relative overflow-hidden mb-5 md:mb-10">
         <p className="absolute text-lg text-gray-300 -z-10 left-0 top-0 w-full opacity-40">
           {heroText}
         </p>
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col container mx-auto px-10 py-10 w-full max-w-5xl">
+      <section className="flex flex-col container mx-auto p-5 md:p-10 w-full max-w-5xl">
         <p className="mb-4 text-2xl text-gray-700">
           Testing lightning applications and protocol changes in realistic
           conditions is challenging. While many solutions exist for creating
@@ -70,7 +70,7 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="flex flex-col w-full px-10 py-10 max-w-7xl gap-4">
+      <section className="flex flex-col w-full p-5 md:p-10 max-w-7xl gap-4">
         <div className="flex flex-col md:flex-row w-full gap-4">
           <div className="flex basis-1/2 flex-col gap-2 ">
             <Image src={ln_spec_dev} alt="ln_spec_dev" />
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col w-full px-10 py-10 max-w-7xl gap-4 mb-10">
+      <section className="flex flex-col w-full p-5 md:p-10 max-w-7xl gap-4 mb-10">
         <div className="flex flex-col basis-1/2 gap-2">
           <Image src={bolt} alt="bolt" />
           <h3 className="text-brand-primary font-semibold text-4xl">
