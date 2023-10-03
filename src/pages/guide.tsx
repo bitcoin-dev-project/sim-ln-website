@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const QuickStart = () => {
   return (
-    <main className="w-full font-inter text-xl px-10 py-10 md:max-w-7xl mx-auto">
+    <main className="w-full flex flex-col p-5 md:p-10 gap-5 md:gap-10 font-inter text-xl md:max-w-7xl mx-auto">
       <Image src={race_car} alt="race_car" />
-      <section className="text-gray-800 font-normal pb-10">
+      <section className="text-gray-800 font-normal pb-5 md:pb-10">
         <h1 className="text-5xl pb-6 text-brand-primary font-bold">
-          Quick Start
+          Get Started
         </h1>
         <div className="flex flex-col gap-4">
           <p>
@@ -49,7 +49,7 @@ const QuickStart = () => {
         </div>
       </section>
 
-      <section className="text-gray-800 font-normal pb-10">
+      <section className="text-gray-800 font-normal">
         <h2 className="text-4xl pb-6 text-brand-primary font-bold">
           How to Use
         </h2>
@@ -80,7 +80,7 @@ const QuickStart = () => {
         </div>
       </section>
 
-      <section className="text-gray-800 font-normal pb-10">
+      <section className="text-gray-800 font-normal">
         <h2 className="text-4xl pb-4 text-brand-primary font-bold">
           Install SimLN
         </h2>
@@ -96,7 +96,7 @@ const QuickStart = () => {
           </span>
         </p>
       </section>
-      <section className="text-gray-800 font-normal pb-10">
+      <section className="text-gray-800 font-normal">
         <h2 className="text-4xl pb-4 text-brand-primary font-bold">
           Get in Touch
         </h2>
@@ -140,7 +140,7 @@ const QuickStart = () => {
           </div>
         </div>
       </section>
-      <section className="text-gray-800 font-normal pb-10">
+      <section className="text-gray-800 font-normal">
         <h2 className="text-4xl pb-4 text-brand-primary font-bold">
           Copy Experiment
         </h2>
@@ -158,7 +158,7 @@ const QuickStart = () => {
             dull, stagnant lightning networks?
           </p>
           <p>
-            SimLN is here to make you feel again – to bring joy, wonder, awe,
+            SimLN is here to make you feel again - to bring joy, wonder, awe,
             nay, the entire palette of emotions back to your lightning
             development experience. Simulate a payment from Alice to any number
             of NPCs. Set it to recur every minute. Or every 10 seconds. Or scale
@@ -170,7 +170,7 @@ const QuickStart = () => {
             file.
           </p>
           <p>
-            SimLN – because life is too short to have a boring lightning
+            SimLN - because life is too short to have a boring lightning
             network.
           </p>
         </div>
