@@ -133,9 +133,9 @@ const QuickStart = () => {
           <div>
             <p>Want to contribute to the project?</p>
             <p>
-              If you’d like to contribute code, maintenance help or
+              If you&apos;d like to contribute code, maintenance help or
               documentation to the project please open up a volunteer issue and
-              we’ll find something fun for you.
+              we&apos;ll find something fun for you.
             </p>
           </div>
         </div>
@@ -175,48 +175,11 @@ const QuickStart = () => {
           </p>
         </div>
       </section>
-      <section>
-        <h2 className="text-4xl pb-4 text-brand-primary font-bold">
-          Configuration
-        </h2>
-        <p className="pb-4">
-          Create a config.json file in the same directory as your SimLN binary.
-          Inside, you’ll need to add the credentials for one of the lightning
-          node’s in your network. You’ll also need to define the activity, which
-          is what your simulation should do <Link href="/">See here </Link> for
-          more in-depth docs on defining your simulation
-        </p>
-      </section>
-      <ConfigFileAnnotation />
     </main>
   );
 };
 
 export default QuickStart;
-
-const ConfigFileAnnotation = () => {
-  return (
-    <div className="p-6 bg-brand-primary rounded-lg text-sm text-white">
-      <div>
-        <p>{`"nodes": [{`}</p>
-        <p className="pl-4">{`"address": "localhost:10001",`}</p>
-        <p className="pl-4">{`"macaroon": "~/lnd/admin.macaroon",`}</p>
-        <p className="pl-4">{`"cert": "~/lnd/alice/tls.cert",`}</p>
-        <p className="pl-4">{`"alias": "alice",`}</p>
-        <p className="pl-4">{`"id": "038d489e56f137948ad95ac...",`}</p>
-        <p>{`}],`}</p>
-      </div>
-      <div>
-        <p>{`"activity": [{`}</p>
-        <p className="pl-4">{`"src": "027114c496923dc2bc40...",`}</p>
-        <p className="pl-4">{`"dest": "038d489e56f137948ad95ac...",`}</p>
-        <p className="pl-4">{`"interval_sec": "100",`}</p>
-        <p className="pl-4">{`"amt_sat": "1000",`}</p>
-        <p>{`}]`}</p>
-      </div>
-    </div>
-  );
-};
 
 const Code = ({children}: {children: string}) => {
   return (
