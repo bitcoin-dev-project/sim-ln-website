@@ -9,15 +9,15 @@ import styles from "@/styles/home.module.scss";
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center`}>
+    <main className={`flex min-h-screen flex-col items-center text-gray-800`}>
       <section className="w-full relative overflow-hidden mb-5 md:mb-10">
         <p className="absolute text-lg text-gray-300 -z-10 left-0 top-0 w-full opacity-40">
           {heroText}
         </p>
-        <div className="w-full flex flex-col items-center gap-4 md:gap-9 md:py-20">
+        <div className="w-full flex flex-col items-center gap-6 pb-8 md:gap-9 md:py-20">
           <Image src={SimLnHero} alt="logo" />
           <p
-            className={`${styles.shimmer_text} text-5xl md:text-6xl text-brand-primary text-balance text-center md:w-[70%] lg:max-w-[800px] font-inter font-[700]`}
+            className={`${styles.shimmer_text} text-5xl md:text-6xl text-brand-primary text-balance text-center md:w-[70%] lg:max-w-[800px] font-sans font-[700]`}
           >
             Instantly simulate real-world Lightning network activity
           </p>
@@ -27,7 +27,7 @@ export default function Home() {
               className="bg-brand-primary text-brand-secondary text-md sm:text-lg md:text-2xl overflow-clip"
             >
               <span className={`${styles.action_buttons} p-3 md:p-6`}>
-                Quick Start
+                Quick start
               </span>
             </Link>
             <Link
@@ -41,31 +41,31 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col container mx-auto p-5 md:p-10 w-full max-w-5xl">
-        <p className="mb-4 text-2xl text-gray-700">
+      <section className="flex flex-col gap-6 md:gap-9 container mx-auto p-5 md:p-10 w-full max-w-5xl">
+        <p className="text-2xl">
           Testing lightning applications and protocol changes in realistic
           conditions is challenging. While many solutions exist for creating
-          regtest and simnet networks, producing regular payments within these
+          regtest and signet networks, producing regular payments within these
           networks requires custom scripting and constant attention.
         </p>
-        <p className="mb-4 text-2xl text-gray-700">
-          SimLN fixes this by providing the ability to simulate payment activity
-          on any test network! Features include:
+        <p className="text-2xl">
+          SimLN fixes this by letting you simulate payment activity on any test
+          network!
         </p>
-        <ul className="list-disc list-inside">
+        <ul className="flex flex-col gap-2 list-disc list-inside text-2xl font-normal">
           <li>
-            <span className="text-lg text-slate-700 font-medium">
-              Routing nodes with many channels
+            <span className="inline">
+              Random activity generated based on network topology.
             </span>
           </li>
           <li>
-            <span className="text-lg text-slate-700 font-medium">
-              Gossip between large quantities of peers{" "}
+            <span className="inline">
+              User-specified activity execution for specific payment flows.
             </span>
           </li>
           <li>
-            <span className="text-lg text-slate-700 font-medium">
-              Routing multiple payments between
+            <span className="">
+              Cross implementation lightning support.
             </span>
           </li>
         </ul>
@@ -77,7 +77,7 @@ export default function Home() {
             <h3 className="text-brand-primary font-semibold text-4xl">
               For Lightning spec devs
             </h3>
-            <p className="text-2xl text-gray-700">
+            <p className="text-2xl">
               Easily test protocol changes against realistic network conditions.
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
             <h3 className="text-brand-primary font-semibold text-4xl">
               For app devs
             </h3>
-            <p className="text-2xl text-gray-700">
+            <p className="text-2xl">
               Stress test your lightning enabled application to see how it
               performs in real-world, liquidity constrained environments.
             </p>
@@ -100,13 +100,13 @@ export default function Home() {
             Features
           </h3>
         </div>
-        <div className="flex flex-col md:flex-row w-full gap-4 font-light text-xl">
+        <div className="flex flex-col md:flex-row w-full gap-4 text-xl">
           <div className="flex flex-col basis-1/2 gap-2">
             <p className="text-brand-primary font-semibold text-2xl">
               Random Activity Generation
             </p>
             <p className="">
-              Simply provide the simulator with a set of nodes and it will
+              Simply provide the simulator with a set of nodes. SimLNwill
               generate activity based on the topology of the network.
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function Home() {
               Configured Payment Flows
             </p>
             <p className="">
-              Define specific patterns of payments to simulate the exact kind of
+              Define specific payment patterns to simulate the exact kind of
               traffic you need.
             </p>
           </div>
