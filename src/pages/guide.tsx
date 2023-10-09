@@ -5,36 +5,50 @@ import Link from "next/link";
 
 const QuickStart = () => {
   return (
-    <main className="w-full flex flex-col p-5 md:p-10 gap-5 md:gap-10 font-inter text-xl md:max-w-7xl mx-auto">
-      <Image src={race_car} alt="race_car" />
-      <section className="text-gray-800 font-normal pb-5 md:pb-10">
+    <main className="w-full flex flex-col p-5 md:p-10 gap-5 md:gap-10 text-lg font-normal md:max-w-7xl mx-auto">
+      <section className="">
+        <Image src={race_car} alt="race_car" />
         <h1 className="text-5xl pb-6 text-brand-primary font-bold">
-          Get Started
+          Getting Started
         </h1>
         <div className="flex flex-col gap-4">
-          <p>
-            LNSim is built to help you simulate lightning payments on any
-            regtest or simnet network. To get started you will need:
-          </p>
-          <ul className="list-disc list-inside">
+          <div>
+            <p>
+              SimLN helps you simulate lightning payments on any regtest or signet
+              network.
+            </p>
+            <p>You will need:</p>
+          </div>
+          <ul className="flex flex-col gap-2 list-disc list-inside text-base text-gray-800">
             <li>
-              <span className="text-lg text-slate-700 font-medium">
+              <p className="inline">
                 A lightning network with open channels.
-              </span>
+              </p>
             </li>
             <li>
-              <span className="text-lg text-slate-700 font-medium">
-                Access to execute grpc commands on network nodes.
-              </span>
+              <p className="inline">
+                Access to execute <span className="font-semibold">gRPC</span>{" "}
+                commands on network nodes.
+              </p>
             </li>
             <li>
-              <span className="text-lg text-slate-700 font-medium">
-                The rust compiler installed.
-              </span>
+              <p className="inline">
+                <span>The </span>
+                <span>
+                  <Link
+                    href="https://www.rust-lang.org/tools/install"
+                    className="underline underline-offset-2 text-brand-primary"
+                    target="_blank"
+                  >
+                    Rust
+                  </Link>
+                </span>
+                <span> compiler installed.</span>
+              </p>
             </li>
           </ul>
           <p>
-            If you need help setting up a test network, we suggest{" "}
+            <span>If you need help setting up a test network, we suggest </span>
             <span>
               <Link
                 className="underline underline-offset-2 text-brand-primary"
@@ -43,67 +57,74 @@ const QuickStart = () => {
               >
                 Polar
               </Link>
-            </span>{" "}
-            for beginners or Scaling Lightning for larger deployments.
+            </span>
+            <span> for beginners or </span>
+            <span>
+              <Link
+                className="underline underline-offset-2 text-brand-primary"
+                href="https://github.com/scaling-lightning/scaling-lightning"
+                target="_blank"
+              >
+                Scaling Lightning
+              </Link>
+            </span>
+            <span> for larger deployments.</span>
           </p>
         </div>
       </section>
 
       <section className="text-gray-800 font-normal">
-        <h2 className="text-4xl pb-6 text-brand-primary font-bold">
+        <h2 className="text-2xl md:text-4xl pb-2 md:pb-4 text-brand-primary font-bold">
           How to Use
         </h2>
         <div className="flex flex-col gap-4">
-          <p>The basic steps for using SimLN are:</p>
-          <ul className="list-disc list-inside">
+          <ul className="flex flex-col gap-2 list-disc list-inside text-base text-gray-800">
             <li>
-              <span className="text-lg text-slate-700 font-medium">
-                Clone repo and install sim-ln.
+              <span className="">
+                Clone repo and install sim-cli
               </span>
             </li>
             <li>
-              <span className="text-lg text-slate-700 font-medium">
-                Configure access to nodes in a simple config.json.
+              <span className="">
+                Provide access to nodes via simulation parameters json file.
               </span>
             </li>
             <li>
-              <span className="text-lg text-slate-700 font-medium">
+              <span className="">
                 Define your desired activity
               </span>
             </li>
             <li>
-              <span className="text-lg text-slate-700 font-medium">
+              <span className="">
                 Run the simulation!
               </span>
             </li>
           </ul>
+          <p>
+            <span>See our </span>
+            <span>
+              <Link
+                href="https://github.com/bitcoin-dev-project/sim-ln#getting-started"
+                className="underline underline-offset-1 text-brand-primary"
+              >
+                installation instructions
+              </Link>
+            </span>
+            <span> on GitHub to get started!</span>
+          </p>
         </div>
       </section>
 
       <section className="text-gray-800 font-normal">
-        <h2 className="text-4xl pb-4 text-brand-primary font-bold">
-          Install SimLN
-        </h2>
-        <p>
-          See our installation instructions on github to get started!{" "}
-          <span>
-            <Link
-              href="https://github.com/bitcoin-dev-project/sim-ln#getting-started"
-              className="underline underline-offset-1 text-brand-primary"
-            >
-              installation instructions
-            </Link>
-          </span>
-        </p>
-      </section>
-      <section className="text-gray-800 font-normal">
-        <h2 className="text-4xl pb-4 text-brand-primary font-bold">
+        <h2 className="text-2xl md:text-4xl pb-2 md:pb-4 text-brand-primary font-bold">
           Get in Touch
         </h2>
         <div className="flex flex-col gap-4">
-          <div>
-            <p>Having problems running sim-ln?</p>
-            <p>
+          <div className="flex flex-col gap-1">
+            <p className="font-medium text-base text-gray-700">
+              Having problems running sim-ln?
+            </p>
+            <p className="">
               <span>Get in touch with us on </span>
               <span>
                 <Link
@@ -115,8 +136,8 @@ const QuickStart = () => {
               </span>
             </p>
           </div>
-          <div>
-            <p>Found a bug or want a feature?</p>
+          <div className="flex flex-col gap-1">
+            <p className="font-medium text-base text-gray-700">Found a bug or want a feature?</p>
             <p>
               <span>Please feel free to </span>
               <span>
@@ -130,8 +151,8 @@ const QuickStart = () => {
               <span> with bug reports or feature requests.</span>
             </p>
           </div>
-          <div>
-            <p>Want to contribute to the project?</p>
+          <div className="flex flex-col gap-1">
+            <p className="font-medium text-base text-gray-700">Want to contribute to the project?</p>
             <p>
               If you&apos;d like to contribute code, maintenance help or
               documentation to the project please open up a volunteer issue and
@@ -140,53 +161,8 @@ const QuickStart = () => {
           </div>
         </div>
       </section>
-      <section className="text-gray-800 font-normal">
-        <h2 className="text-4xl pb-4 text-brand-primary font-bold">
-          Copy Experiment
-        </h2>
-        <div className="flex flex-col gap-4">
-          <p>
-            Look at your lightning regtest network. It&apos;s so lonely. Just Alice
-            and Bob. Occasionally, Charlie stops by, but very rarely these days.
-            And when he does, things are just awkward. What should Alice, Bob,
-            and Charlie talk about? Maybe simulate a single lightning payment?
-            Wow, you really know how to spice things up Charlie.
-          </p>
-          <p>
-            Life is short. Our time as nodes in this plane of existence is but a
-            fleeting moment in the vastness of time. Why waste it with empty,
-            dull, stagnant lightning networks?
-          </p>
-          <p>
-            SimLN is here to make you feel again - to bring joy, wonder, awe,
-            nay, the entire palette of emotions back to your lightning
-            development experience. Simulate a payment from Alice to any number
-            of NPCs. Set it to recur every minute. Or every 10 seconds. Or scale
-            this up to every NPC in your network.
-          </p>
-          <p>
-            Your lightning network is a canvas, and simulations are a rich
-            tapestry that you paint with every keystroke into your <Code>config.toml</Code>
-            file.
-          </p>
-          <p>
-            SimLN - because life is too short to have a boring lightning
-            network.
-          </p>
-        </div>
-      </section>
     </main>
   );
 };
 
 export default QuickStart;
-
-const Code = ({children}: {children: string}) => {
-  return (
-    <>
-    <span> </span>
-    <code className="bg-gray-100 border-gray-300 border-[1px] rounded-md text-gray-600 font-semibold px-2 inline-flex py-0 text-[14px]">{children}</code>
-    <span> </span>
-    </>
-  )
-}
