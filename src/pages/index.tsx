@@ -15,7 +15,7 @@ export default function Home() {
           {heroText}
         </p>
         <div className="w-full flex flex-col items-center gap-6 pb-8 md:gap-9 md:py-20">
-          <Image src={SimLnHero} alt="logo" />
+          <Image src={SimLnHero} alt="logo" priority />
           <p
             className={`${styles.shimmer_text} text-5xl md:text-6xl text-brand-primary text-balance text-center md:w-[70%] lg:max-w-[800px] font-sans font-[700]`}
           >
