@@ -106,7 +106,7 @@ export default function Home() {
               Random Activity Generation
             </p>
             <p className="">
-              Simply provide the simulator with a set of nodes. SimLNwill
+              Simply provide the simulator with a set of nodes. SimLN will
               generate activity based on the topology of the network.
             </p>
           </div>
