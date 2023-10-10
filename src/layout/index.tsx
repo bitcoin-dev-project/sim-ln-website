@@ -18,8 +18,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta
           property="og:image"
           content={`${
-              process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
-            }/og_image_dark.png`}
+            process.env.VERCEL_URL ? "https://" + process.env.VERCEL_URL : ""
+          }/og_image_dark.png`}
+        />
+        <meta name="twitter:title" content="SIM-LN: Lightning Simulation" />
+        <meta
+          name="twitter:card"
+          content={`${
+            process.env.VERCEL_URL ? "https://" + process.env.VERCEL_URL : ""
+          }/og_image_dark.png`}
+        />
+        <meta
+          name="twitter:description"
+          content="Instantly simulate real-world Lightning network activity"
+        />
+        <meta
+          name="twitter:image"
+          content={`${
+            process.env.VERCEL_URL ? "https://" + process.env.VERCEL_URL : ""
+          }/og_image_dark.png`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./vercel.svg" />
