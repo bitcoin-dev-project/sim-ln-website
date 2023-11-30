@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={`${styles.app_container}`}>
       <Head>
-        <title>SIM-LN: Lightning Simulation</title>
+        <title>SimLN: Lightning Activity Simulator</title>
         <meta name="description" content="Lightning Simulation" />
         <meta property="og:title" content="SIM-LN: Lightning Simulation" />
         <meta
